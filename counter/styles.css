@@ -1,0 +1,121 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+  --green: #008c00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  padding: clamp(20px, 5vw, 50px) 10px 10px;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  max-width: 25%;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: var(--light-blue);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+.heading-primary {
+  font-stretch: normal;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--white);
+  padding: 1.8rem 0 0 0;
+}
+.counter-txt {
+  font-size: 6.4rem;
+  color: var(--white);
+  display: block;
+}
+.line {
+  display: block;
+  background-color: #fff;
+  width: 90%;
+  height: 2px;
+  margin-bottom: 1.6rem;
+}
+.container-btn {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.4rem;
+}
+.btn {
+  min-width: 11rem;
+  font-size: 0.8rem;
+  margin: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border: none;
+  font-weight: 700;
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+.btn-sub {
+  background-color: var(--color-sec);
+}
+.btn-res {
+  color: var(--black);
+}
+.btn-add {
+  background-color: var(--green);
+}
+.icon {
+  font-size: 2.4em;
+  margin-right: 1em;
+}
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
