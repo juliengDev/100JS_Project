@@ -1,27 +1,20 @@
-const score = document.querySelector(".counter-txt");
-const btnGrp = document.querySelector(".container-btn");
+const hexValue = document.querySelector(".hex-value");
+const btn = document.querySelector(".btn-res");
 
-btnGrp.addEventListener("click", function (e) {
-  e.preventDefault();
-  const btn = e.target.closest(".btn");
-
-  if (btn) {
-    if (btn.classList.contains("btn-res")) {
-      const randomNumber = generateRandomNumber(0, 1000);
-      score.innerHTML = randomNumber;
-    }
-  }
-});
-
-const generateRandomNumber = function (min, max) {
-  if (
-    typeof min !== "number" ||
-    typeof max !== "number" ||
-    isNaN(min) ||
-    isNaN(max)
-  ) {
-    throw new Error("Les paramètres doivent être des nombres valides.");
-  }
-
+const randomNumber = function (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+
+const rgbToHex = (r, g, b) =>
+  "#" + [r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("");
+
+const generateRandomBodyColor = function () {
+  const r = randomNumber(0, 255);
+  const g = randomNumber(0, 255);
+  const b = randomNumber(0, 255);
+  const hexColor = rgbToHex(r, g, b);
+  hexValue.textContent = hexColor;
+  document.body.style.backgroundColor = `${hexColor}`;
+};
+
+btn.addEventListener("click", generateRandomBodyColor);

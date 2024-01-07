@@ -1,0 +1,146 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+  --green: #008c00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--light-blue);
+}
+.modal-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  max-width: 25%;
+  padding: 0 2rem;
+}
+.heading-primary {
+  font-size: 3.6rem;
+  font-weight: 100;
+  color: var(--white);
+  padding-top: 2.4rem;
+}
+.btn-txt {
+  color: var(--white);
+  margin-bottom: 3.2rem;
+  font-weight: 100;
+}
+.btn-popup {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 0.8em;
+  margin-bottom: 2.4rem;
+  background-color: var(--light-blue);
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.6rem;
+  display: flex;
+  border: 1px solid var(--white);
+  background-color: var(--white);
+  transition: transform 400ms, opacity 400ms;
+}
+.modal--popup {
+  opacity: 1;
+  transform: translateY(30rem);
+}
+.modal__content {
+  text-align: center;
+}
+.heading-secondary {
+  font-size: 2.4rem;
+}
+.modal__txt {
+  padding: 1rem 0;
+  border-top: 1px solid var(--black);
+}
+.modal__close-icon {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+@keyframes slideIn {
+  from {
+    margin-top: -100rem;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
