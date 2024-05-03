@@ -49,49 +49,44 @@ p {
 img {
   max-width: 100%;
 }
-
+hr {
+  width: 90%;
+}
 .container {
   display: flex;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  background: var(--light-blue);
+  background: var(--grey);
 }
-.box {
-  width: 30%;
+.chara-counter {
+  background: var(--light-blue);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: var(--white);
   border-radius: 5px;
-  padding: 4rem;
 }
-.form {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3.2rem;
-}
-.form__txt {
-  outline: none;
-  /* width: 250px; */
-  border: none;
-  border-bottom: 2px solid var(--color-sec);
-  padding: 0.8em 0.2em; /* Set padding */
-  font-size: 1.6em; /* Set font size */
-}
-.form__btn {
+.heading-primary {
   color: var(--white);
-  background-color: var(--color-primary);
+  font-weight: 400;
+  margin: 1.4rem;
+}
+.number {
+  margin: 0 auto 1.4rem;
+  font-size: 3.6rem;
+  display: inline-block;
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 1.2rem;
+}
+.input-txt {
+  width: 40rem;
   border: none;
+  padding: 1.2em;
+  margin: 2.4em 4.4rem;
   border-radius: 5px;
-  margin: 0 1em;
-  padding: 1em 2.5em;
 }
-.result {
-  font-weight: 600;
-  font-size: 2.4rem;
-}
-
 /*
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
